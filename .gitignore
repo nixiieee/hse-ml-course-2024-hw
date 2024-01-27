@@ -1,6 +1,7 @@
 *
 !.gitignore
 !*/.gitignore
-!data
+!data/*
 !*.md
 !environment.yml
+!notebooks/.ipynb_checkpoints/*
