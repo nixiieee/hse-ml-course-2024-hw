@@ -1,7 +1,1 @@
-*
-!.gitignore
-!*/.gitignore
 !data/*
-!data
-!*.md
-!notebooks/.ipynb_checkpoints/*
