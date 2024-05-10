@@ -3,7 +3,7 @@ from telebot import types
 import requests, re
 from main import predict_model
 
-bot = telebot.TeleBot('6796946783:AAHLotswpGeRSiCuY21xJeXKm5IDBnAXFEI')
+bot = telebot.TeleBot(TOKEN)
 welcome_sent = False
 print(1)
 
