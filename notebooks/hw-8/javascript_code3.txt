@@ -1,0 +1,19 @@
+async function fetchData(url) {
+    try {
+        let response = await fetch(url);
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.error(`ERROR: ${error}`);
+    }
+}
+
+const apiURL = 'https://jsonplaceholder.typicode.com/posts/1';
+fetchData(apiURL).then(data => {
+    if (data) {
+        console.log(data);
+    }
+});

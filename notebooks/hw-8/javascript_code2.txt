@@ -1,0 +1,17 @@
+function sieveOfEratosthenes(n) {
+    let primes = new Array(n + 1).fill(true);
+    primes[0] = primes[1] = false; // 0 и 1 не являются простыми числами
+
+    for (let p = 2; p * p <= n; p++) {
+        if (primes[p]) {
+            for (let i = p * p; i <= n; i += p) {
+                primes[i] = false;
+            }
+        }
+    }
+
+    return primes.reduce((acc, isPrime, num) => {
+        if (isPrime) acc.push(num);
+        return acc;
+    }, []);
+}
