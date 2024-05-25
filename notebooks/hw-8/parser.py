@@ -1,7 +1,9 @@
 import os
 import pandas as pd
 
-ext_match = {'.py' : 'PYTHON', '.cpp' : 'CPLUSPLUS', '.js' : 'JAVASCRIPT'}
+ext_match = {'.py' : 'PYTHON', '.cpp' : 'CPLUSPLUS', '.js' : 'JAVASCRIPT', 
+            '.java' : 'JAVA', '.md' : 'MARKDOWN', '.ps1' : 'POWERSHELL', 
+            '.kt' : 'KOTLIN', '.hs' : 'HASKELL', '.yml' : 'YAML', '.c' : 'C'}
 
 def find_files_with_extensions(directory, extensions):
     file_list = []
@@ -33,7 +35,7 @@ def create_dataframe_from_files(directory, extensions):
     return df
 
 directory = '../../data/programming_languages'
-extensions = ['.cpp', '.py', '.js'] 
+extensions = ['.cpp', '.py', '.js', '.java', '.c', '.hs', '.md', '.yml', '.ps1', '.kt'] 
 df = create_dataframe_from_files(directory, extensions)
 
 df.to_csv('../../data/github_code.csv')
